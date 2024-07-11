@@ -1,4 +1,3 @@
-# If statements
 print("==IF Statements==")
 x = int(input("Masukan Integer : "))
 if x < 0:
@@ -20,6 +19,7 @@ match x:
         print("Zero.")
     case 1:
         print("Single")
+    case 2|3|4:
+        print("WOAH!")
     case _:
         print("More")
-# Loop
