@@ -1,20 +1,20 @@
-# Ini adalah komen satu baris
+# This is a single-line comment
 """
-Ini adalah komen
-multi baris
+This is a multi-line
+comment
 """
 
-print("Halo python!")
+print("Hello python!")
 
-# Deklarasi variable
+# Variable declaration
 a = 10
 x = a
 
-# Indentasi (tidak seperti javascript menggunakan tanda bracket { } di python menggunakn indentasi atau tab atau spasi)
+# Indentation (tidak seperti javascript menggunakan tanda bracket { } di python menggunakn indentasi atau tab atau spasi)
 if a==x:
     print("a sama dengan x")
 
-# contoh indentasi yang salah (error jika dijalankan)
+# Example of an wrong indentation (error jika dijalankan)
 """
 if a==x:
     print("a sama dengan x")
