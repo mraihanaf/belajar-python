@@ -46,3 +46,32 @@ print("solved",f(1)) # -> [1]
 print("solved",f(2)) # -> [2]
 print("solved",f(3)) # -> [3]
 
+# Positional & Keyword arguments
+def pos_kwd(param1, *param2, **param3):
+    print("param1",param1) # param1 takes the first argument
+    print("param2 positional",param2) # param2 takes all the positional arguments
+    print("param3 keyword",param3) # param3 takes all the keyword arguments
+
+pos_kwd("Halo","nama","saya",firstName="Udin",lastName="Sigma")
+
+# Positional argument cannot appear after keyword arguments
+# pos_kwd("Halo","nama","saya",firstName="Udin",lastName="Sigma","Weladahlah") --> error
+
+# Positional only & Keyword only argument
+def pos_only(arg, /):
+    print(arg)
+
+def kwd_only(*, arg):
+    print(arg)
+
+pos_only("positional argument")
+# pos_only(arg="Hello") # this will return error.
+kwd_only(arg="keyword argument")
+# kwd_only("Hello") # this will return error
+
+# combined
+def combined_example(standard, pos_only, /, *, kwd_only):
+    print(standard,pos_only,kwd_only)
+
+combined_example(1,2,kwd_only=3)
+
