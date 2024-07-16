@@ -71,7 +71,23 @@ kwd_only(arg="keyword argument")
 
 # combined
 def combined_example(standard, pos_only, /, *, kwd_only):
-    print(standard,pos_only,kwd_only)
+    print("combined",standard,pos_only,kwd_only)
 
 combined_example(1,2,kwd_only=3)
 
+# Function annotations
+
+# def function(var: data-type) -> data-type
+# example
+
+def addTwoNum(n1: int, n2) -> int:
+    return n1 + n2
+
+def sum(*numbers: int) -> int:
+    out = 0
+    for n in numbers:
+        out += n
+    return out
+
+print("annotations addTwoNum() ->", addTwoNum(1,2))
+print("annotations sum() ->", sum(1,2,3))
